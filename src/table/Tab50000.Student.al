@@ -78,9 +78,9 @@ table 50000 "Student"
     begin
         //When insert a record into the table.
         "User ID" := UserId;
-        "Entry Date" := Today();
+        "Entry Date" := Today;
         // "Entry Time" := DT2Time(CurrentDateTime);
-        "Entry Time" := Time();
+        "Entry Time" := Time;
     end;
 
     trigger OnModify()
