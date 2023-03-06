@@ -43,6 +43,10 @@ table 50000 "Student"
             DataClassification = ToBeClassified;
             TableRelation = "User Setup"."User ID" where("E-Mail" = filter(<> ''));
         }
+        field(9; "No. Series"; Code[50])
+        {
+            TableRelation = "No. Series";
+        }
     }
 
     keys
