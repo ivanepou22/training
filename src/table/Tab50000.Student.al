@@ -41,11 +41,22 @@ table 50000 "Student"
         field(8; "User ID"; Code[50])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "User Setup"."User ID" where("E-Mail" = filter(<> ''));
+            TableRelation = "User Setup"."User ID";
+            Editable = false;
         }
         field(9; "No. Series"; Code[50])
         {
             TableRelation = "No. Series";
+        }
+        field(10; "Entry Date"; Date)
+        {
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(11; "Entry Time"; Time)
+        {
+            DataClassification = ToBeClassified;
+            Editable = false;
         }
     }
 
@@ -66,21 +77,26 @@ table 50000 "Student"
     trigger OnInsert()
     begin
         //When insert a record into the table.
+        "User ID" := UserId;
+        "Entry Date" := Today();
+        // "Entry Time" := DT2Time(CurrentDateTime);
+        "Entry Time" := Time();
     end;
 
     trigger OnModify()
     begin
         // when a field is on a table is mondified
+        Message('Yello !');
     end;
 
     trigger OnDelete()
     begin
         //deleting a record on a table
+        //
     end;
 
     trigger OnRename()
     begin
-        //when changing primary key fields
     end;
 
 }
