@@ -1,6 +1,7 @@
-table 50000 "Student"
+table 50000 Student
 {
     DataClassification = ToBeClassified;
+    DataCaptionFields = "No.", "First Name", "Last Name";
     CaptionML = ENU = 'Student', DAN = 'Navn', ESP = 'Nombre', FRA = 'Nom', ENC = 'Name';
 
     fields
@@ -71,6 +72,12 @@ table 50000 "Student"
         }
     }
 
+    fieldgroups
+    {
+        fieldgroup(DropDown; "No.", "First Name", "Last Name") { }
+        fieldgroup(Brick; "No.", "First Name", "Last Name") { }
+    }
+
     var
         Age: integer;
 
@@ -98,5 +105,8 @@ table 50000 "Student"
     trigger OnRename()
     begin
     end;
+
+
+
 
 }
