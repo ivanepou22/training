@@ -1,4 +1,4 @@
-table 50000 Student
+table 50000 "Student"
 {
     DataClassification = ToBeClassified;
     DataCaptionFields = "No.", "First Name", "Last Name";
@@ -29,10 +29,9 @@ table 50000 Student
             DataClassification = ToBeClassified;
             ExtendedDatatype = PhoneNo;
         }
-        field(6; Gender; Option)
+        field(6; Gender; Enum Gender)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = " ",Female,Male;
         }
         field(7; DOB; Date)
         {
