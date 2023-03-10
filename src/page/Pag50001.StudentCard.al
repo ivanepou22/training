@@ -124,7 +124,8 @@ page 50001 "Student Card"
                 var
                     Item: Record Item;
                 begin
-                    TestFunctionProcedure();
+                    // TestFunctionProcedure();
+                    TestCode.Run();
                 end;
             }
         }
@@ -150,7 +151,7 @@ page 50001 "Student Card"
 
 
     var
-        myInt: Integer;
+        TestCode: Codeunit "Test CodeUnit";
 
     trigger OnOpenPage()
     var
