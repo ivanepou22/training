@@ -9,8 +9,7 @@ report 50001 "Customer Entries"
     {
         dataitem(Customer; Customer)
         {
-
-
+            PrintOnlyIfDetail = true;
             column(No_; "No.")
             {
 
