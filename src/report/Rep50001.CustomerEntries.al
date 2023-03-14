@@ -76,11 +76,6 @@ report 50001 "Customer Entries"
             {
                 group(GroupName)
                 {
-                    // field(Name; SourceExpression)
-                    // {
-                    //     ApplicationArea = All;
-
-                    // }
                 }
             }
         }

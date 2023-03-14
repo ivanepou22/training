@@ -60,10 +60,12 @@ page 50000 "Student List"
     {
         area(Navigation)
         {
-            action(ActionName)
+            action("Import Student")
             {
                 ApplicationArea = All;
-
+                RunObject = xmlport Student;
+                Promoted = true;
+                PromotedCategory = Process;
                 trigger OnAction();
                 begin
 
