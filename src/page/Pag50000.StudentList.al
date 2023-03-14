@@ -66,6 +66,7 @@ page 50000 "Student List"
                 RunObject = xmlport Student;
                 Promoted = true;
                 PromotedCategory = Process;
+                Image = ImportCodes;
                 trigger OnAction();
                 begin
 
