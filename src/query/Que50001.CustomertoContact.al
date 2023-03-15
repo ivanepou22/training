@@ -1,7 +1,7 @@
 query 50001 "Customer to Contact"
 {
     QueryType = Normal;
-
+    QueryCategory = 'Customer List';
     elements
     {
         dataitem(Customer; Customer)
@@ -17,6 +17,7 @@ query 50001 "Customer to Contact"
             {
                 DataItemLink = "No." = Customer."Primary Contact No.";
                 SqlJoinType = InnerJoin;
+
                 column(Contact_No; "No.")
                 {
                 }

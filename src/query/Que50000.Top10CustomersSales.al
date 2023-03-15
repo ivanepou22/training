@@ -1,7 +1,7 @@
 query 50000 "Top 10 Customers - Sales"
 {
     QueryType = Normal;
-    TopNumberOfRows = 5;
+    TopNumberOfRows = 10;
     OrderBy = descending(SalesLCY_Sum);
     QueryCategory = 'Customer List';
 
@@ -25,6 +25,10 @@ query 50000 "Top 10 Customers - Sales"
             column(SalesLCY_Sum; "Sales (LCY)")
             {
                 Method = Sum;
+            }
+            column(PostingDate; "Posting Date")
+            {
+                Method = Year;
             }
         }
     }
